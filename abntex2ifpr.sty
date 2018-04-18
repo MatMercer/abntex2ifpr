@@ -1,0 +1,153 @@
+%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para o Instituto Federal do Paraná
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is Mateus Mercer, mateusmercer@gmail.com
+%%
+%% Further information about abnTeX2 are available on https://github.com/abntex/abntex2
+%%
+
+% ---
+% INICIO DAS CUSTOMIZACOES PARA O INSTITUTO FEDERAL DO PARANA
+% ---
+
+\ProvidesPackage{abntexifpr}[25/04/2017 Modelo de trabalhos acadêmicos para o IFPR]
+
+% ---
+% Uso da fonte Arial
+% ---
+\RequirePackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+% ---
+
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    
+    \vspace*{-2.2cm}
+    \hspace*{-1cm}
+    \includegraphics[width=1.5cm]{logo_ifpr.pdf}
+    \center
+    \large INSTITUTO FEDERAL DO PARANÁ
+    
+    \vspace*{1cm}
+    
+    \MakeUppercase{\large\imprimirautor}
+
+    \vfill
+    \begin{center}
+    \MakeUppercase{\large\bfseries\imprimirtitulo}
+    \end{center}
+    \vfill
+    
+    \MakeUppercase{\large\imprimirlocal}
+
+    \large\imprimirdata
+    
+    \vspace*{1cm}
+  \end{capa}
+}
+
+
+% ---
+% Margens:
+% esquerda 3cm direita 2cm
+% topo 3cm base 2cm
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+\checkandfixthelayout
+% ---
+
+% folha de rosto 
+
+%\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+{\ABNTEXchapterfont\large INSTITUTO FEDERAL DO PARANÁ}
+    
+    \vspace*{1cm}
+    
+{\MakeUppercase{\large\imprimirautor}}
+
+\vspace*{\fill}\vspace*{\fill}\vspace*{\fill}
+
+\begin{center}
+\MakeUppercase{\ABNTEXchapterfont\bfseries\large\imprimirtitulo}
+\end{center}
+
+\vspace*{\fill}
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \SingleSpacing
+  \imprimirpreambulo
+  \end{minipage}
+  \vspace*{\fill}
+}
+
+%{\large\imprimirorientadorRotulo~\imprimirorientador\par}
+
+%\abntex@ifnotempty{\imprimircoorientador}{ 
+%{\large\imprimircoorientadorRotulo~\imprimircoorientador}%
+%}%
+
+\vspace*{\fill}
+
+{\MakeUppercase{\large\imprimirlocal}}
+
+\par
+
+{\large\imprimirdata}
+\vspace*{1cm}
+\end{center}
+}
+
+\makeatother
+
+% Comandos de dados - disciplina
+\providecommand{\imprimirdisciplina}{}
+\newcommand{\disciplina}[1]{\renewcommand{\imprimirdisciplina}{#1 }}
+
+% Comandos de dados - professor ministrante
+\providecommand{\imprimirprofessorministrante}{}
+\newcommand{\professorministrante}[1]{\renewcommand{\imprimirprofessorministrante}{#1 }}
+
+% Comandos de dados - professor curso
+\providecommand{\imprimircurso}{}
+\newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1 }}
+
+% ---
+% Configuração de fontes
+\renewcommand{\ABNTEXchapterfont}{\bfseries}
+\renewcommand{\ABNTEXchapterfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXpartfont}{\ABNTEXchapterfont}
+\renewcommand{\ABNTEXpartfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsectionfont}{\ABNTEXchapterfont}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsubsectionfont}{\sffamily}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsubsubsectionfont}{\sffamily}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\normalsize}
+
+\renewcommand{\ABNTEXsubsubsubsectionfont}{\sffamily}
+\renewcommand{\ABNTEXsubsubsubsectionfontsize}{\normalsize}
+% ---
+
+% ---
+% FIM DAS CUSTOMIZACOES PARA O INSTITUTO FEDERAL DO PARANA
+% ---
