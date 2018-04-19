@@ -87,7 +87,7 @@
 % Texto padrão antes do número das páginas
 \renewcommand{\backref}{}
 % Define os textos da citação
-\renewcommand*{\backrefalt}[4]{
+\renewcommand*{\backrefalt}[4]{%
 	\ifcase #1 %
 		Nenhuma citação no texto.%
 	\or
@@ -133,7 +133,7 @@
 
 % informações do PDF
 \makeatletter
-\hypersetup{
+\hypersetup{%
      	%pagebackref=true,
 		pdftitle={\@title}, 
 		pdfauthor={\@author},
@@ -146,8 +146,8 @@
     	filecolor=magenta,      		% color of file links
 		urlcolor=blue,
 		bookmarksdepth=4
-}
 \makeatother
+}
 % --- 
 
 % --- 
@@ -169,7 +169,7 @@
 % ---
 % Aonde as imagens estao
 % ---
-\graphicspath{ {imagens/} }
+\graphicspath{{imagens/}}
 % ---
 
 % ----
@@ -271,10 +271,10 @@ pesquisa - Apresentação}.
 
 A expressão ``Modelo canônico'' é utilizada para indicar que \abnTeX\ não é
 modelo específico de nenhuma universidade ou instituição, mas que implementa tão
-somente os requisitos das normas da ABNT. Uma lista completa das normas
+somente os requisitos das normas da ABNT\@. Uma lista completa das normas
 observadas pelo \abnTeX\ é apresentada em \citeonline{abntex2classe}.
 
-Sinta-se convidado a participar do projeto \abnTeX! Acesse o site do projeto em
+Sinta-se convidado a participar do projeto \abnTeX!\@ Acesse o site do projeto em
 \url{http://www.abntex.net.br/}. Também fique livre para conhecer,
 estudar, alterar e redistribuir o trabalho do \abnTeX, desde que os arquivos
 modificados tenham seus nomes alterados e que os créditos sejam dados aos
@@ -289,7 +289,7 @@ Isso permite que futuras versões do \abnTeX~não se tornem automaticamente
 incompatíveis com as customizações promovidas. Consulte
 \citeonline{abntex2-wiki-como-customizar} par mais informações.
 
-Este documento deve ser utilizado como complemento dos manuais do \abnTeX\ 
+Este documento deve ser utilizado como complemento dos manuais do \abnTeX\
 \cite{abntex2classe,abntex2cite,abntex2cite-alf} e da classe \textsf{memoir}
 \cite{memoir}. Consulte \citeonline{abntex2modelo} para obter
 exemplos e informações adicionais de uso de \abnTeX\ e de \LaTeX.
@@ -305,9 +305,9 @@ Lauro César Araujo
 % ----------------------------------------------------------
 % Capitulo de textual  
 % ----------------------------------------------------------
-\chapter{Elementos textuais}
+\chapter{Elementos textuais}\index{elementos textuais}
 
-\index{elementos textuais}A norma ABNT NBR 15287:2011, p. 5, apresenta a
+A norma ABNT NBR 15287:2011, p. 5, apresenta a
 seguinte orientação quanto aos elementos textuais:
 
 \begin{citacao}
