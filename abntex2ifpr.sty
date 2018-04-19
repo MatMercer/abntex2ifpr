@@ -99,9 +99,17 @@
   \SingleSpacing
   \justify
   \imprimirpreambulo
+  \abntex@ifnotempty{\imprimirorientador}{%
+   \\\\ Orientador: \imprimirorientador
+  }
+  \abntex@ifnotempty{\imprimircoorientador}{%
+   \\ Corientador: \imprimircoorientador
+  }
+
   \end{minipage}
   \vspace*{\fill}
 }
+
 
 %{\large\imprimirorientadorRotulo~\imprimirorientador\par}
 
