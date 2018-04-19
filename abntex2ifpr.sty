@@ -29,6 +29,12 @@
 \renewcommand{\familydefault}{\sfdefault}
 % ---
 
+% ---
+% Jusiticação de texto
+% ---
+\RequirePackage{ragged2e}
+% ---
+
 % alterando a capa
 \renewcommand{\imprimircapa}{%
   \begin{capa}%
@@ -89,8 +95,9 @@
 
 \abntex@ifnotempty{\imprimirpreambulo}{%
   \hspace{.45\textwidth}
-  \begin{minipage}{.5\textwidth}
+  \begin{minipage}{0.5\textwidth}
   \SingleSpacing
+  \justify
   \imprimirpreambulo
   \end{minipage}
   \vspace*{\fill}
