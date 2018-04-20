@@ -196,6 +196,54 @@ requisito parcial de avaliação.}
 % ---
 
 % ---
+% Inserir folha de aprovação
+% ---
+
+% Isto é um exemplo de Folha de aprovação, elemento obrigatório da NBR
+% 14724/2011 (seção 4.2.1.3). Você pode utilizar este modelo até a aprovação
+% do trabalho. Após isso, substitua todo o conteúdo deste arquivo por uma
+% imagem da página assinada pela banca com o comando abaixo:
+%
+% \begin{folhadeaprovacao}
+% \includepdf{folhadeaprovacao_final.pdf}
+% \end{folhadeaprovacao}
+%
+\begin{folhadeaprovacao}
+  \begin{center}
+    \begin{center}
+      \ABNTEXchapterfont\bfseries FOLHA DE APROVAÇÃO
+      \par
+        \vspace*{1.5cm}
+        {\normalfont\ABNTEXchapterfontsize\MakeUppercase\imprimirautor}
+        \vspace*{1.5cm}
+        \par
+        {\normalfont\ABNTEXchapterfontsize\MakeUppercase\imprimirtitulo}
+    \end{center}
+    \vspace*{\fill}
+    
+    \hspace{.45\textwidth}
+    \begin{minipage}{.5\textwidth}
+        \imprimirpreambulo
+    \end{minipage}%
+    \vspace*{\fill}
+   \end{center}
+
+   \assinatura{\textbf{\imprimirorientador} \\ Orientador} 
+   \assinatura{\textbf{Professor} \\ Convidado 1}
+   \assinatura{\textbf{Professor} \\ Convidado 2}
+   %\assinatura{\textbf{Professor} \\ Convidado 3}
+   %\assinatura{\textbf{Professor} \\ Convidado 4}
+      
+   \vspace{3cm}
+  \begin{center}
+   \imprimirlocal, 22 de Janeiro de 1999.
+  \end{center}
+  
+  \pagebreak
+\end{folhadeaprovacao}
+% ---
+
+% ---
 % NOTA DA ABNT NBR 15287:2011, p. 4:
 %  ``Se exigido pela entidade, apresentar os dados curriculares do autor em
 %     folha ou página distinta após a folha de rosto.''
