@@ -1,5 +1,4 @@
-
-# Created by https://www.gitignore.io/api/git,latex
+# Created by https://www.gitignore.io/api/git,latex,libreoffice,microsoftoffice
 
 ### Git ###
 *.orig
@@ -232,12 +231,36 @@ TSWLatexianTemp*
 # glossaries
 *.glstex
 
+### LibreOffice ###
+# LibreOffice locks
+.~lock.*#
 
-# End of https://www.gitignore.io/api/git,latex
+### MicrosoftOffice ###
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+
+# Visio autosave temporary files
+*.~vsd*
+
+
+# End of https://www.gitignore.io/api/git,latex,libreoffice,microsoftoffice
 
 # Don't ignore PDF in imagens directory
 !imagens/*.pdf
 
 # Ignore the build folder
 build
+
+
 
