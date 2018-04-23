@@ -73,11 +73,20 @@
 \checkandfixthelayout
 % ---
 
+% ---
+% Numeração de páginas, header superior direito
+% ---
+\makeevenhead{plain}{}{}{\thepage}
+\makeoddhead{plain}{}{}{\thepage}
+
+\makeevenfoot{plain}{}{}{}
+\makeoddfoot{plain}{}{}{}
+
 % folha de rosto 
 
 %\makeatletter
 
-\renewcommand{\folhaderostocontent}{
+\renewcommand{\folhaderostocontent}{%
 \begin{center}
 {\ABNTEXchapterfont\large INSTITUTO FEDERAL DO PARANÁ}
     
