@@ -161,6 +161,39 @@
 
 \makeatother
 
+% ---
+% Customização das páginas de apêndices/anexos
+% ---
+\renewcommand{\appendixpage}{%
+    \pagebreak
+    \begin{center}
+        \ABNTEXchapterfont\MakeUppercase\appendixname
+        \vspace{1cm}
+    \end{center}
+}
+
+% ---
+% Imprime uma pagina de divisao no estilo parte
+\renewcommand{\partpage}{%
+  \cleardoublepage
+  \phantomsection
+  \appendixpage
+}
+
+% atalhos para \partpage ou \appendixpage* 
+\makeatletter
+\renewcommand{\partapendices}{%
+    \partpage
+    \addcontentsline{toc}{chapter}{\apendicename}%
+}
+
+\renewcommand{\partanexos}{%
+    \partpage
+    \addcontentsline{toc}{chapter}{\anexoname}%
+}
+\makeatother
+% ---
+
 % Comandos de dados - disciplina
 \providecommand{\imprimirdisciplina}{}
 \newcommand{\disciplina}[1]{\renewcommand{\imprimirdisciplina}{#1 }}
